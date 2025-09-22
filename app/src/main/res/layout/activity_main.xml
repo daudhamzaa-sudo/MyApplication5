@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#1976D2"
+        android:backgroundTint="#1976D2"
+        android:text="hello hamza"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/prs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#388E3C"
+        android:onClick="onClick"
+        android:text="press to go" />
+
+    <EditText
+        android:id="@+id/hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter your name" />
+
+    <Button
+        android:id="@+id/btngo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/f01313"
+        android:onClick="onClick"
+        android:text="Button" />
+
+    <EditText
+        android:id="@+id/etlnput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter yor input"
+        android:inputType="text"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NextScreen" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+</LinearLayout>
