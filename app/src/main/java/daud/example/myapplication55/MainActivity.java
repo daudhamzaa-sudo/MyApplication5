@@ -2,12 +2,14 @@ package daud.example.myapplication55;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etlnput;
     private Button btngo;
 
-
+    private static final String TAG= "LifecycleLab";
 
     public void onClick(View v)
 
@@ -35,6 +37,49 @@ public class MainActivity extends AppCompatActivity {
 
         Intent i=new Intent(MainActivity.this, MainActivity2.class);
         startActivity(i);
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(this,"onstart",Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"OnStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this,"onresume",Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"Onresume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this,"onpause",Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"Onpause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(this,"onstop",Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"Onstop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(this,"ondestroy",Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"Ondestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this,"onrestart",Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"Onrestart");
     }
 
     @Override
